@@ -1,0 +1,405 @@
+/**
+ * Squeeze Evidence Panel Styles
+ * Dark terminal aesthetic with clear data hierarchy
+ */
+
+.panel {
+    background: rgba(15, 15, 20, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 360px;
+    max-width: 480px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.longIcon {
+    color: #ef4444;
+}
+
+.shortIcon {
+    color: #22c55e;
+}
+
+.strength {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.strength.loading {
+    background: rgba(100, 116, 139, 0.2);
+    color: #94a3b8;
+}
+
+.strength.building {
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+}
+
+.strength.imminent {
+    background: rgba(249, 115, 22, 0.15);
+    color: #f97316;
+}
+
+.strength.active {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.probability {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.probValue {
+    font-size: 20px;
+    font-weight: 700;
+    color: #22c55e;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.probLabel {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.closeBtn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+.closeBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.tab:hover {
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.tab.active {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+    border-bottom: 2px solid #3b82f6;
+}
+
+/* Content */
+.content {
+    padding: 16px;
+}
+
+.rulesExplain {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+/* Rules Panel */
+.rulesList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rule {
+    display: grid;
+    grid-template-columns: 24px 1fr 60px;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+    border-left: 3px solid transparent;
+}
+
+.rule.strong {
+    border-left-color: #22c55e;
+    background: rgba(34, 197, 94, 0.05);
+}
+
+.rule.active {
+    border-left-color: #facc15;
+    background: rgba(250, 204, 21, 0.05);
+}
+
+.rule.weak {
+    border-left-color: #f97316;
+    background: rgba(249, 115, 22, 0.03);
+}
+
+.rule.inactive {
+    border-left-color: rgba(100, 116, 139, 0.3);
+    opacity: 0.5;
+}
+
+.ruleIcon {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.rule.strong .ruleIcon,
+.rule.active .ruleIcon,
+.rule.weak .ruleIcon {
+    color: #22c55e;
+}
+
+.rule.inactive .ruleIcon {
+    color: #6b7280;
+}
+
+.ruleInfo {
+    min-width: 0;
+}
+
+.ruleName {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ruleValues {
+    display: flex;
+    gap: 6px;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.currentValue {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.threshold {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.contributeBar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.contributeFill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #22c55e);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Exchanges Panel */
+.exchangeGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.exchangeCard {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+}
+
+.exchangeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.exchangeName {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.oiShare {
+    font-size: 10px;
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.exchangeMetrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.metricLabel {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+}
+
+.metricValue {
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.metricValue.extreme {
+    color: #ef4444;
+}
+
+.metricValue.danger {
+    color: #f97316;
+}
+
+/* Cascade Panel */
+.cascadeVisual {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.cascadeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+.triggerRange {
+    color: #f97316;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.cascadeMeter {
+    height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cascadeZone {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cascadeZone:nth-child(1) {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+.cascadeZone:nth-child(2) {
+    background: rgba(249, 115, 22, 0.3);
+}
+
+.cascadeZone:nth-child(3) {
+    background: rgba(250, 204, 21, 0.3);
+}
+
+.cascadeStats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.cascadeStat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.statLabel {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+}
+
+.statValue {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+}

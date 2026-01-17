@@ -1,0 +1,263 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bg-ground);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.addForm {
+    display: flex;
+    gap: 4px;
+}
+
+.input {
+    height: 24px;
+    padding: 0 10px;
+    font-size: 11px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    width: 160px;
+    outline: none;
+    font-family: var(--font-mono);
+}
+
+.input:focus {
+    border-color: var(--text-muted);
+}
+
+.addBtn {
+    height: 24px;
+    padding: 0 10px;
+    font-size: 10px;
+    font-weight: 600;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.addBtn:hover {
+    background: var(--bg-elevated);
+    border-color: var(--text-muted);
+}
+
+.grid {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+    align-content: start;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.card:hover {
+    border-color: var(--text-muted);
+    background: var(--bg-tertiary);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.symbol {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+.remove {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    padding: 4px;
+    font-size: 11px;
+}
+
+.remove:hover {
+    color: var(--negative);
+}
+
+.mid {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+.bot {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-top: 1px solid var(--border-dim);
+    padding-top: 8px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.row span:first-child {
+    color: var(--text-muted);
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.row span:last-child {
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.exchange {
+    margin-top: 8px;
+    font-size: 9px;
+    color: var(--text-dim);
+    text-align: right;
+    font-family: var(--font-mono);
+}
+
+.noData {
+    padding: 12px;
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 10px;
+}
+
+.pos {
+    color: var(--positive);
+    font-family: var(--font-mono);
+}
+
+.neg {
+    color: var(--negative);
+    font-family: var(--font-mono);
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    color: var(--text-muted);
+    padding: 40px;
+}
+
+.empty .icon {
+    color: var(--text-muted);
+    opacity: 0.3;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(1.05);
+    }
+}
+
+.empty h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.empty p {
+    font-size: 12px;
+    text-align: center;
+    max-width: 320px;
+    color: var(--text-secondary);
+}
+
+.suggestions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.suggestions span {
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+}
+
+.suggBtn {
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: var(--font-mono);
+}
+
+.suggBtn:hover {
+    color: var(--text-primary);
+    border-color: var(--text-muted);
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-size: 11px;
+}

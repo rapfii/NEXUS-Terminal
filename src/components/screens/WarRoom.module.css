@@ -1,0 +1,503 @@
+.warRoom {
+    padding: 1.5rem;
+    background: var(--bg-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ============================================
+   REGIME BANNER - The 10-second read
+   ============================================ */
+.regimeBanner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(20, 20, 30, 0.95), rgba(15, 15, 25, 0.98));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+}
+
+.regimeMain {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.regimeIcon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.regimeLabel {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.regimeValue {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.regimeConfidence {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+}
+
+.regimeDrivers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.driver {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    color: var(--text-secondary);
+}
+
+.regimeMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+
+.stablecoinFlow {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stablecoinFlow small {
+    color: var(--text-muted);
+}
+
+/* ============================================
+   PRESSURE SECTION - Who is trapped
+   ============================================ */
+.pressureSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.pressureCard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.pressureHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.pressureSymbol {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.pressureStatus {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.longsTrapped {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.shortsTrapped {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.noneTrapped {
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+    border: 1px solid rgba(250, 204, 21, 0.3);
+}
+
+.pressureGauge {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.gaugeRow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gaugeLabel {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    width: 80px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.gaugeBar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.gaugeFill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.gaugeFillLong {
+    background: linear-gradient(90deg, #ef4444, #f97316);
+}
+
+.gaugeFillShort {
+    background: linear-gradient(90deg, #22c55e, #10b981);
+}
+
+.gaugeValue {
+    font-size: 0.75rem;
+    min-width: 70px;
+    text-align: right;
+    font-family: var(--font-mono);
+}
+
+.squeezeProb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+
+.squeezeLabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.squeezeValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.squeezeHigh {
+    color: #22c55e;
+}
+
+.squeezeMedium {
+    color: #facc15;
+}
+
+.squeezeLow {
+    color: var(--text-muted);
+}
+
+/* ============================================
+   GRID LAYOUT
+   ============================================ */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.panel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.panelHeader small {
+    font-weight: 400;
+    color: var(--text-muted);
+    text-transform: none;
+}
+
+.panelBody {
+    padding: 1rem 1.25rem;
+}
+
+/* ============================================
+   ROTATION STRIP
+   ============================================ */
+.rotationStrip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.rotationLabel {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.rotationPhase {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.rotationArrow {
+    margin: 0 0.5rem;
+    color: var(--text-muted);
+}
+
+.flowSection {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.flowItem {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.flowIn {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+}
+
+.flowOut {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+/* ============================================
+   LIQUIDATION FEED
+   ============================================ */
+.liqFeed {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.liqItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    font-size: 0.8rem;
+}
+
+.liqItem:last-child {
+    border-bottom: none;
+}
+
+.liqSide {
+    width: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.liqLong {
+    color: #ef4444;
+}
+
+.liqShort {
+    color: #22c55e;
+}
+
+.liqSymbol {
+    width: 60px;
+    font-weight: 500;
+}
+
+.liqValue {
+    flex: 1;
+    text-align: right;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+}
+
+.liqTime {
+    width: 60px;
+    text-align: right;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+}
+
+/* ============================================
+   STABLECOIN PANEL
+   ============================================ */
+.stableRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.stableRow:last-child {
+    border-bottom: none;
+}
+
+.stableName {
+    font-weight: 500;
+}
+
+.stableValue {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+}
+
+.stableChange {
+    font-size: 0.8rem;
+    min-width: 60px;
+    text-align: right;
+}
+
+.pos {
+    color: #22c55e;
+}
+
+.neg {
+    color: #ef4444;
+}
+
+/* ============================================
+   SQUEEZE CANDIDATES
+   ============================================ */
+.squeezeCandidate {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.squeezeCandidate:last-child {
+    border-bottom: none;
+}
+
+.squeezeCandidateSymbol {
+    font-weight: 600;
+    width: 60px;
+}
+
+.squeezeCandidateType {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.shortSqueeze {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+}
+
+.longSqueeze {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.squeezeCandidateStrength {
+    flex: 1;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.squeezeCandidateProb {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* ============================================
+   LOADING
+   ============================================ */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+.noData {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .warRoom {
+        padding: 1rem;
+    }
+    
+    .regimeBanner {
+        grid-template-columns: 1fr;
+    }
+    
+    .pressureSection {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rotationStrip {
+        flex-wrap: wrap;
+    }
+}

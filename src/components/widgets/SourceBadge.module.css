@@ -1,0 +1,163 @@
+/**
+ * SourceBadge Styles
+ * Minimal, non-intrusive data provenance indicator
+ */
+
+/* Wrapper for widgets */
+.wrapper {
+    position: relative;
+}
+
+/* Badge base */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+}
+
+/* Positions */
+.top-right {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+}
+
+.inline {
+    position: static;
+}
+
+/* Status dot */
+.statusDot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.fresh .statusDot {
+    background: #22c55e;
+    box-shadow: 0 0 4px #22c55e;
+}
+
+.ok .statusDot {
+    background: #facc15;
+}
+
+.warning .statusDot {
+    background: #f97316;
+}
+
+.stale .statusDot {
+    background: #ef4444;
+    animation: blink 1s ease infinite;
+}
+
+.mock .statusDot {
+    background: #8b5cf6;
+}
+
+.noData .statusDot {
+    background: #6b7280;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* SLA icon */
+.slaIcon {
+    font-size: 8px;
+    opacity: 0.7;
+}
+
+/* Source label */
+.source {
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Separator */
+.sep {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Age */
+.age {
+    color: rgba(255, 255, 255, 0.5);
+    min-width: 28px;
+}
+
+.fresh .age {
+    color: rgba(34, 197, 94, 0.8);
+}
+
+.stale .age {
+    color: #ef4444;
+}
+
+/* Tags */
+.staleTag,
+.mockTag {
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-left: 2px;
+}
+
+.staleTag {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.mockTag {
+    background: rgba(139, 92, 246, 0.2);
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* State variations */
+.fresh {
+    border-color: rgba(34, 197, 94, 0.2);
+}
+
+.stale {
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.mock {
+    border-color: rgba(139, 92, 246, 0.3);
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.noData {
+    opacity: 0.5;
+}

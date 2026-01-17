@@ -1,0 +1,479 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    height: 100%;
+    overflow-y: auto;
+    background: var(--bg-primary);
+}
+
+/* SQUEEZE DETECTOR PANEL */
+.squeezePanel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.squeezePanelHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.squeezeCount {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--warning);
+    padding: 2px 8px;
+    background: rgba(210, 153, 34, 0.1);
+    border: 1px solid rgba(210, 153, 34, 0.2);
+    border-radius: var(--radius-sm);
+}
+
+.squeezeGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+}
+
+/* System Alert Style Squeeze Cards */
+.squeezeCard {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-left-width: 4px;
+    border-radius: 2px;
+}
+
+.squeezeCard.shortSqueeze {
+    border-left-color: var(--positive);
+    /* Short Squeeze = Bullish Price Action usually? Or Green signal. */
+    background: linear-gradient(90deg, rgba(74, 222, 128, 0.05) 0%, var(--bg-tertiary) 100%);
+}
+
+.squeezeCard.longSqueeze {
+    border-left-color: var(--negative);
+    background: linear-gradient(90deg, rgba(248, 81, 73, 0.05) 0%, var(--bg-tertiary) 100%);
+}
+
+.squeezeHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.squeezeSymbol {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+.squeezeBadge {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.squeezeBadge.imminent {
+    background: var(--warning);
+    color: #000;
+}
+
+.squeezeBadge.loading {
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+.squeezeType {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.squeezeReason {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: right;
+    font-family: var(--font-mono);
+}
+
+.icon {
+    opacity: 0.7;
+}
+
+/* FUNDING HEATMAP */
+.heatmapPanel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.heatmapHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.heatmapLegend {
+    display: flex;
+    gap: 16px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.legendShort {
+    color: var(--negative);
+}
+
+.legendNeutral {
+    color: var(--text-muted);
+}
+
+.legendLong {
+    color: var(--positive);
+}
+
+.heatmapGrid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    padding: 8px;
+    background: var(--bg-secondary);
+}
+
+.heatmapCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 4px;
+    border-radius: 2px;
+    cursor: default;
+    background: var(--bg-tertiary);
+    /* Fallback */
+}
+
+.heatmapSymbol {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.heatmapValue {
+    font-size: 9px;
+    font-family: var(--font-mono);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* OPTIONS FLOW PANEL */
+.optionsPanel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.optionsPanelHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.optionsSource {
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 2px 6px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+}
+
+.optionsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+}
+
+.optionsCard {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 12px;
+}
+
+.optionsCardHeader {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+.optionsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 11px;
+    border-bottom: 1px solid var(--border-dim);
+}
+
+.optionsRow:last-child {
+    border-bottom: none;
+}
+
+.optionsRow span:first-child {
+    color: var(--text-muted);
+}
+
+.optionsValue {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.optionsLoading {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+/* STATS BAR */
+.statsBar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+}
+
+.value {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+.value.warning {
+    color: var(--warning);
+}
+
+.filters {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.filterBtn {
+    padding: 4px 10px;
+    font-size: 9px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.filterBtn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.filterBtn.active {
+    background: var(--bg-elevated);
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+}
+
+.search {
+    padding: 6px 10px;
+    font-size: 11px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    outline: none;
+    width: 140px;
+}
+
+.search:focus {
+    border-color: var(--text-muted);
+}
+
+/* TABLE */
+.tableRef {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 100px 100px 140px 90px 60px 80px 100px 90px;
+    gap: 4px;
+    padding: 8px 12px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+}
+
+.body {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 100px 100px 140px 90px 60px 80px 100px 90px;
+    gap: 4px;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-dim);
+    transition: background 0.1s;
+    align-items: center;
+}
+
+.row:hover {
+    background: var(--bg-tertiary);
+}
+
+.row.extremeRow {
+    background: rgba(210, 153, 34, 0.05);
+    /* Subtle warning tint */
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+}
+
+.cell b {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.mono {
+    font-family: var(--font-mono);
+}
+
+.dim {
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+.funding {
+    font-family: var(--font-mono);
+    font-weight: 500;
+}
+
+.hotApr {
+    color: var(--warning);
+    font-weight: 600;
+    font-family: var(--font-mono);
+}
+
+.pos {
+    color: var(--positive);
+}
+
+.neg {
+    color: var(--negative);
+}
+
+.neu {
+    color: var(--text-muted);
+}
+
+.signalBadge {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.signalBadge.shortSignal {
+    background: var(--positive-muted);
+    color: var(--positive);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.signalBadge.longSignal {
+    background: var(--negative-muted);
+    color: var(--negative);
+    border: 1px solid rgba(248, 81, 73, 0.2);
+}
+
+.loading {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-dim);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .heatmapGrid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

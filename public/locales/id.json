@@ -1,0 +1,133 @@
+{
+    "common": {
+        "appName": "NEXUS Terminal",
+        "loading": "Memuat...",
+        "error": "Error",
+        "retry": "Coba Lagi",
+        "live": "LIVE",
+        "cached": "Cache",
+        "noData": "Data tidak tersedia",
+        "connecting": "Menghubungkan...",
+        "connected": "Terhubung",
+        "disconnected": "Terputus",
+        "reconnecting": "Menghubungkan ulang..."
+    },
+    "nav": {
+        "dashboard": "Beranda",
+        "terminal": "Terminal",
+        "matrix": "Matriks Eksekusi",
+        "watchlist": "Pantauan"
+    },
+    "mode": {
+        "simple": "Sederhana",
+        "pro": "Pro",
+        "switchTo": "Beralih ke {mode}"
+    },
+    "dashboard": {
+        "title": "Ikhtisar Pasar Global",
+        "marketCap": "Total Kapitalisasi Pasar",
+        "volume24h": "Volume 24 Jam",
+        "btcDominance": "Dominasi BTC",
+        "ethDominance": "Dominasi ETH",
+        "fearGreed": "Indeks Ketakutan & Keserakahan",
+        "fearGreedLabels": {
+            "extremeFear": "Sangat Takut",
+            "fear": "Takut",
+            "neutral": "Netral",
+            "greed": "Serakah",
+            "extremeGreed": "Sangat Serakah"
+        },
+        "topGainers": "Naik Tertinggi",
+        "topLosers": "Turun Tertinggi",
+        "trending": "Trending",
+        "defiTvl": "TVL DeFi"
+    },
+    "terminal": {
+        "title": "Terminal Pasar",
+        "chart": "Grafik",
+        "orderbook": "Buku Order",
+        "trades": "Transaksi Terkini",
+        "depth": "Kedalaman",
+        "timeframes": {
+            "1m": "1m",
+            "5m": "5m",
+            "15m": "15m",
+            "1h": "1J",
+            "4h": "4J",
+            "1d": "1H"
+        },
+        "bid": "Bid",
+        "ask": "Ask",
+        "spread": "Spread",
+        "spreadBps": "Spread (bps)",
+        "imbalance": "Ketidakseimbangan",
+        "price": "Harga",
+        "size": "Jumlah",
+        "total": "Total",
+        "time": "Waktu",
+        "side": "Sisi",
+        "buy": "Beli",
+        "sell": "Jual",
+        "spot": "Spot",
+        "perp": "Perp",
+        "popular": "Pasangan Populer"
+    },
+    "widgets": {
+        "funding": {
+            "title": "Tingkat Pendanaan",
+            "current": "Tingkat Saat Ini",
+            "predicted": "Prediksi",
+            "countdown": "Pendanaan Berikutnya",
+            "annualized": "Tahunan"
+        },
+        "openInterest": {
+            "title": "Open Interest",
+            "value": "Nilai OI",
+            "change24h": "Perubahan 24j"
+        },
+        "markPrice": {
+            "title": "Harga Mark",
+            "mark": "Mark",
+            "index": "Indeks",
+            "last": "Terakhir",
+            "basis": "Basis",
+            "premium": "Premium"
+        }
+    },
+    "matrix": {
+        "title": "Matriks Eksekusi",
+        "subtitle": "Bandingkan antar exchange",
+        "exchange": "Exchange",
+        "bestBid": "Bid Terbaik",
+        "bestAsk": "Ask Terbaik",
+        "spread": "Spread",
+        "funding": "Pendanaan",
+        "oi": "Open Interest",
+        "volume": "Volume",
+        "arbitrage": "Gap Arbitrase",
+        "arbOpportunity": "Peluang Arbitrase",
+        "noArb": "Tidak ada peluang arbitrase"
+    },
+    "watchlist": {
+        "title": "Pantauan",
+        "add": "Tambah ke Pantauan",
+        "remove": "Hapus",
+        "empty": "Pantauan Anda kosong",
+        "emptyHint": "Tambahkan simbol untuk melacaknya di sini"
+    },
+    "exchanges": {
+        "binance": "Binance",
+        "bybit": "Bybit",
+        "gateio": "GateIO"
+    },
+    "errors": {
+        "fetchFailed": "Gagal mengambil data",
+        "wsDisconnected": "WebSocket terputus",
+        "rateLimited": "Rate limited, mencoba lagi...",
+        "unknown": "Terjadi kesalahan"
+    },
+    "footer": {
+        "dataDelay": "Data mungkin terlambat",
+        "source": "Data dari API exchange publik"
+    }
+}

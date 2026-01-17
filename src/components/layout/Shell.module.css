@@ -1,0 +1,132 @@
+.shell {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--bg-ground);
+    /* Deepest background */
+    overflow: hidden;
+    font-family: var(--font-sans);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    /* Tighter header */
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 0 8px;
+    gap: 12px;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.nav {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 2px;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 10px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.1s;
+    white-space: nowrap;
+    position: relative;
+}
+
+.tab:hover {
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+}
+
+.tab.active {
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+    border-right: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--text-primary);
+    /* Minimal active indicator */
+}
+
+.icon {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.tab.active .icon {
+    opacity: 1;
+}
+
+.status {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9px;
+    font-family: var(--font-mono);
+    color: var(--text-dim);
+    padding: 2px 6px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+}
+
+.dot {
+    background: var(--text-muted);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin-right: 2px;
+    flex-shrink: 0;
+}
+
+.dot.live {
+    background: var(--positive);
+    box-shadow: 0 0 5px var(--positive);
+}
+
+.main {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 4px;
+        gap: 4px;
+    }
+
+    .label {
+        display: none;
+    }
+
+    .tab {
+        padding: 0 8px;
+    }
+}

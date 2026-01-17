@@ -1,0 +1,133 @@
+{
+    "common": {
+        "appName": "NEXUS Terminal",
+        "loading": "Loading...",
+        "error": "Error",
+        "retry": "Retry",
+        "live": "LIVE",
+        "cached": "Cached",
+        "noData": "No data available",
+        "connecting": "Connecting...",
+        "connected": "Connected",
+        "disconnected": "Disconnected",
+        "reconnecting": "Reconnecting..."
+    },
+    "nav": {
+        "dashboard": "Dashboard",
+        "terminal": "Terminal",
+        "matrix": "Execution Matrix",
+        "watchlist": "Watchlist"
+    },
+    "mode": {
+        "simple": "Simple",
+        "pro": "Pro",
+        "switchTo": "Switch to {mode}"
+    },
+    "dashboard": {
+        "title": "Global Market Overview",
+        "marketCap": "Total Market Cap",
+        "volume24h": "24h Volume",
+        "btcDominance": "BTC Dominance",
+        "ethDominance": "ETH Dominance",
+        "fearGreed": "Fear & Greed Index",
+        "fearGreedLabels": {
+            "extremeFear": "Extreme Fear",
+            "fear": "Fear",
+            "neutral": "Neutral",
+            "greed": "Greed",
+            "extremeGreed": "Extreme Greed"
+        },
+        "topGainers": "Top Gainers",
+        "topLosers": "Top Losers",
+        "trending": "Trending",
+        "defiTvl": "DeFi TVL"
+    },
+    "terminal": {
+        "title": "Market Terminal",
+        "chart": "Chart",
+        "orderbook": "Order Book",
+        "trades": "Recent Trades",
+        "depth": "Depth",
+        "timeframes": {
+            "1m": "1m",
+            "5m": "5m",
+            "15m": "15m",
+            "1h": "1H",
+            "4h": "4H",
+            "1d": "1D"
+        },
+        "bid": "Bid",
+        "ask": "Ask",
+        "spread": "Spread",
+        "spreadBps": "Spread (bps)",
+        "imbalance": "Imbalance",
+        "price": "Price",
+        "size": "Size",
+        "total": "Total",
+        "time": "Time",
+        "side": "Side",
+        "buy": "Buy",
+        "sell": "Sell",
+        "spot": "Spot",
+        "perp": "Perp",
+        "popular": "Popular Pairs"
+    },
+    "widgets": {
+        "funding": {
+            "title": "Funding Rate",
+            "current": "Current Rate",
+            "predicted": "Predicted",
+            "countdown": "Next Funding",
+            "annualized": "Annualized"
+        },
+        "openInterest": {
+            "title": "Open Interest",
+            "value": "OI Value",
+            "change24h": "24h Change"
+        },
+        "markPrice": {
+            "title": "Mark Price",
+            "mark": "Mark",
+            "index": "Index",
+            "last": "Last",
+            "basis": "Basis",
+            "premium": "Premium"
+        }
+    },
+    "matrix": {
+        "title": "Execution Matrix",
+        "subtitle": "Compare across exchanges",
+        "exchange": "Exchange",
+        "bestBid": "Best Bid",
+        "bestAsk": "Best Ask",
+        "spread": "Spread",
+        "funding": "Funding",
+        "oi": "Open Interest",
+        "volume": "Volume",
+        "arbitrage": "Arbitrage Gap",
+        "arbOpportunity": "Arbitrage Opportunity",
+        "noArb": "No arbitrage opportunity"
+    },
+    "watchlist": {
+        "title": "Watchlist",
+        "add": "Add to Watchlist",
+        "remove": "Remove",
+        "empty": "Your watchlist is empty",
+        "emptyHint": "Add symbols to track them here"
+    },
+    "exchanges": {
+        "binance": "Binance",
+        "bybit": "Bybit",
+        "gateio": "GateIO"
+    },
+    "errors": {
+        "fetchFailed": "Failed to fetch data",
+        "wsDisconnected": "WebSocket disconnected",
+        "rateLimited": "Rate limited, retrying...",
+        "unknown": "An unknown error occurred"
+    },
+    "footer": {
+        "dataDelay": "Data may be delayed",
+        "source": "Data from public exchange APIs"
+    }
+}

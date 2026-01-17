@@ -1,0 +1,172 @@
+.selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Market Type Toggle */
+.marketToggle {
+    display: flex;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 3px;
+    gap: 2px;
+}
+
+.marketBtn {
+    padding: 8px 18px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.marketBtn:hover {
+    color: var(--text-secondary);
+}
+
+.marketBtn.active {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Symbol Search */
+.symbolSection {
+    position: relative;
+}
+
+.symbolSearch {
+    display: flex;
+    align-items: center;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.symbolSearch:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-muted);
+}
+
+.symbolInput {
+    width: 130px;
+    padding: 10px 14px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    outline: none;
+    letter-spacing: 0.02em;
+}
+
+.symbolInput::placeholder {
+    color: var(--text-dim);
+    font-weight: 400;
+}
+
+.symbolSubmit {
+    padding: 10px 14px;
+    background: var(--accent-muted);
+    border: none;
+    border-left: 1px solid var(--border);
+    color: var(--accent);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.symbolSubmit:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Symbol Dropdown */
+.symbolDropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 320px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.symbolDropdownHeader {
+    padding: 10px 14px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+}
+
+.symbolGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    padding: 8px;
+}
+
+.symbolItem {
+    padding: 8px 6px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-tertiary);
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.symbolItem:hover {
+    background: var(--bg-elevated);
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+}
+
+.symbolItem.active {
+    background: var(--accent-muted);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .selector {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .symbolInput {
+        width: 100px;
+    }
+
+    .symbolDropdown {
+        width: 280px;
+    }
+
+    .symbolGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

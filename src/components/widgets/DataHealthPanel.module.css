@@ -1,0 +1,334 @@
+/**
+ * DataHealthPanel Styles
+ * Compact operational UI - no decorative elements
+ */
+
+/* ============================================
+   COMPACT BAR (Header Mode)
+   ============================================ */
+
+.compactBar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    background: rgba(15, 15, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-size: 11px;
+}
+
+.compactBar:hover {
+    background: rgba(20, 20, 28, 0.95);
+}
+
+/* Health Badge */
+.healthBadge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 10px;
+}
+
+.healthBadge.healthy {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+}
+
+.healthBadge.degraded {
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+}
+
+.healthBadge.critical {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.healthDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.healthLabel {
+    line-height: 1;
+}
+
+/* Connection Pills */
+.connectionPills {
+    display: flex;
+    gap: 6px;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pill.connected {
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.pill.connecting {
+    border-color: rgba(250, 204, 21, 0.3);
+}
+
+.pill.disconnected {
+    border-color: rgba(239, 68, 68, 0.2);
+    opacity: 0.6;
+}
+
+.pillIcon {
+    font-size: 8px;
+}
+
+.pill.connected .pillIcon {
+    color: #22c55e;
+}
+
+.pill.connecting .pillIcon {
+    color: #facc15;
+    animation: spin 1s linear infinite;
+}
+
+.pill.disconnected .pillIcon {
+    color: #6b7280;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pillName {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.pillLatency {
+    font-size: 9px;
+    padding-left: 3px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 2px;
+}
+
+.latencyGood {
+    color: #22c55e;
+}
+
+.latencyWarn {
+    color: #facc15;
+}
+
+.latencyBad {
+    color: #ef4444;
+}
+
+.latencyNone {
+    color: #6b7280;
+}
+
+/* Last Update */
+.lastUpdate {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.updateLabel {
+    font-size: 10px;
+}
+
+.updateValue {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    min-width: 28px;
+}
+
+/* ============================================
+   FULL PANEL MODE
+   ============================================ */
+
+.panel {
+    background: rgba(15, 15, 20, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.panelTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Connection Grid */
+.connectionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.connectionCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.connectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.statusDot {
+    font-size: 10px;
+}
+
+.statusDot.connected {
+    color: #22c55e;
+}
+
+.statusDot.connecting {
+    color: #facc15;
+}
+
+.statusDot.disconnected {
+    color: #6b7280;
+}
+
+.exchangeName {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.connectionMetrics {
+    display: flex;
+    gap: 12px;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.metricLabel {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.metricValue {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+}
+
+/* SLA Section */
+.slaSection {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 12px;
+}
+
+.slaTitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.slaGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.slaItem {
+    display: grid;
+    grid-template-columns: 80px 16px 1fr;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.slaType {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.slaStatus {
+    font-size: 8px;
+}
+
+.slaStatus.slaGood {
+    color: #22c55e;
+}
+
+.slaStatus.slaWarn {
+    color: #facc15;
+}
+
+.slaStatus.slaBad {
+    color: #ef4444;
+}
+
+.slaDesc {
+    color: rgba(255, 255, 255, 0.4);
+}

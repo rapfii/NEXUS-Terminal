@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    cursor: default;
+    position: relative;
+}
+
+/* NEXUS - Strong, Gradient, Glossy */
+.nexus {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #ffffff 30%, var(--accent) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.4));
+    position: relative;
+    text-transform: uppercase;
+}
+
+/* Shine effect overlaid on NEXUS */
+.nexusWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            transparent 100%);
+    transform: skewX(-20deg);
+    animation: shine 6s infinite ease-in-out;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+/* TERMINAL - Tech, Boxed, Scanned */
+.terminalWrapper {
+    position: relative;
+    padding: 3px 8px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 4px;
+    background: rgba(8, 10, 13, 0.5);
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+}
+
+.terminal {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 5px var(--accent-glow);
+    z-index: 2;
+    position: relative;
+}
+
+/* Scanning line on TERMINAL */
+.scanLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    background: #fff;
+    box-shadow: 0 0 10px 2px var(--accent);
+    animation: scan 4s ease-in-out infinite;
+    opacity: 0.8;
+    z-index: 1;
+    filter: blur(1px);
+}
+
+/* Animations */
+@keyframes shine {
+
+    0%,
+    80% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 200%;
+        opacity: 0;
+    }
+}
+
+@keyframes scan {
+
+    0%,
+    80% {
+        left: -10%;
+        opacity: 0;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 120%;
+        opacity: 0;
+    }
+}

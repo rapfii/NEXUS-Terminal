@@ -1,0 +1,190 @@
+/**
+ * Stablecoin Flow Panel Styles
+ */
+
+.panel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.headerStats {
+    display: flex;
+    gap: 20px;
+}
+
+.headerStat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.statValue {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+
+.statLabel {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Section */
+.section {
+    margin-bottom: 16px;
+}
+
+.sectionTitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Table */
+.table {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: 100px 100px 60px 60px 100px;
+    gap: 8px;
+    padding: 6px 0;
+    color: var(--text-muted);
+    font-size: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 100px 100px 60px 60px 100px;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.tableRow:last-child {
+    border-bottom: none;
+}
+
+.symbol {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dominance {
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.mono {
+    font-family: var(--font-mono);
+}
+
+.pos {
+    color: #22c55e;
+}
+
+.neg {
+    color: #ef4444;
+}
+
+/* Chain Grid */
+.chainGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.chainCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.chainName {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.flowBar {
+    display: flex;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.flowIn {
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.flowOut {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.chainStats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-family: var(--font-mono);
+}
+
+.netFlow {
+    font-weight: 600;
+}
+
+/* Attribution */
+.attribution {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    color: var(--text-dim);
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.mock {
+    background: rgba(139, 92, 246, 0.15);
+    color: #a855f7;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 9px;
+}

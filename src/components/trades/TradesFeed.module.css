@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+}
+
+.title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 6px 14px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-dim);
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+}
+
+.trades {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.trade {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 4px 14px;
+    font-size: 12px;
+    animation: fadeIn 0.2s ease;
+    transition: background 0.1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        background: rgba(59, 130, 246, 0.1);
+    }
+
+    to {
+        opacity: 1;
+        background: transparent;
+    }
+}
+
+.trade:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Buy/Sell Colors */
+.trade.buy .price {
+    color: var(--positive);
+}
+
+.trade.sell .price {
+    color: var(--negative);
+}
+
+/* Size Highlighting */
+.trade.medium {
+    background: rgba(59, 130, 246, 0.04);
+}
+
+.trade.medium .size {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.trade.large {
+    background: rgba(245, 158, 11, 0.06);
+}
+
+.trade.large .size {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+.price {
+    font-family: var(--font-mono);
+}
+
+.size {
+    text-align: right;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+.time {
+    text-align: right;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-muted);
+    font-size: 12px;
+}

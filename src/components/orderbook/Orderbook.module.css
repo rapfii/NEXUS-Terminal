@@ -1,0 +1,195 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+}
+
+.title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.stats {
+    display: flex;
+    gap: 16px;
+}
+
+.spread {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.spreadBps {
+    margin-left: 4px;
+    opacity: 0.6;
+}
+
+/* Imbalance Indicator */
+.imbalance {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border);
+}
+
+.imbalanceBar {
+    flex: 1;
+    height: 4px;
+    background: var(--bg-elevated);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imbalanceBar::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--text-dim);
+}
+
+.imbalanceFill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.imbalanceValue {
+    font-size: 11px;
+    font-weight: 600;
+    width: 50px;
+    text-align: right;
+    font-family: var(--font-mono);
+}
+
+/* Column Headers */
+.columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 14px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-dim);
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Levels */
+.asks,
+.bids {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.level {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    position: relative;
+    padding: 3px 14px;
+    font-size: 12px;
+    transition: background 0.1s;
+}
+
+.level:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.depthBar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.level.bid .depthBar {
+    background: var(--bid);
+}
+
+.level.ask .depthBar {
+    background: var(--ask);
+}
+
+.level.wall {
+    background: rgba(245, 158, 11, 0.08);
+}
+
+.level.wall .size {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+.price {
+    font-family: var(--font-mono);
+    z-index: 1;
+}
+
+.level.bid .price {
+    color: var(--bid);
+}
+
+.level.ask .price {
+    color: var(--ask);
+}
+
+.size {
+    text-align: right;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    z-index: 1;
+}
+
+.total {
+    text-align: right;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    z-index: 1;
+}
+
+/* Spread Divider */
+.spreadDivider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background: var(--bg-tertiary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.currentPrice {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+/* Loading */
+.loading {
+    flex: 1;
+    padding: 14px;
+}
